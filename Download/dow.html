@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>下载页面</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 50px;
+      background-image: url("forest.jpg"); /* 添加背景图片 */
+      background-size: cover;
+    }
+    h1 {
+      color: #fff;
+    }
+    .download-links {
+      margin-top: 30px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .version-select {
+      width: 300px; /* 设置选择框的宽度 */
+      height: 40px; /* 设置选择框的高度 */
+      border-radius: 20px; /* 圆角外观 */
+      appearance: none; /* 隐藏默认的下拉箭头 */
+      padding: 5px 10px; /* 调整内容和边框之间的间距 */
+      font-size: 16px; /* 设置字体大小 */
+      background-color: #e0e0e0; /* 添加背景颜色 */
+      border: none; /* 移除默认边框 */
+    }
+    .version-select:focus {
+      outline: none; /* 获得焦点时移除边框样式 */
+    }
+    .download-link {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 15px 30px;
+      background-color: #e0e0e0;
+      color: #333;
+      text-decoration: none;
+      border-radius: 20px; /* 圆角外观 */
+      transition: background-color 0.3s ease;
+    }
+    .download-link:hover {
+      background-color: #ccc;
+    }
+    .ecowar-text {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      font-size: 14px; /* 改为较大的字体大小 */
+      color: #ccc;
+    }
+  </style>
+</head>
+<body>
+  <h1>选择要下载的版本</h1>
+  <div class="download-links">
+    <select id="version-select" class="version-select">
+      <option value="" disabled selected>请选择一个版本</option>
+      <option value="new_version.zip">新版本</option>
+      <option value="old_version.zip">旧版本</option>
+    </select>
+    <a href="" download id="download-button" class="download-link">下载</a>
+  </div>
+  <div class="ecowar-text">2023-2023 由 gpt 提供</div>
+  <script>
+    const versionSelect = document.getElementById('version-select');
+    const downloadButton = document.getElementById('download-button');
+
+    versionSelect.addEventListener('change', function() {
+      downloadButton.href = versionSelect.value;
+    });
+  </script>
+</body>
+</html>
