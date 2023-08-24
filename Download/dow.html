@@ -1,13 +1,15 @@
-<!DOCTYPE html>
+ï»¿<!DOCTYPE html>
 <html>
 <head>
-  <title>ÏÂÔØÒ³Ãæ</title>
+<meta charset="UTF-8">
+  <title>ä¸‹è½½é¡µé¢</title>
   <style>
+	  
     body {
       font-family: Arial, sans-serif;
       text-align: center;
       padding: 50px;
-      background-image: url("forest.jpg"); /* Ìí¼Ó±³¾°Í¼Æ¬ */
+      background-image: url("forest.jpg"); /* æ·»åŠ èƒŒæ™¯å›¾ç‰‡ */
       background-size: cover;
     }
     h1 {
@@ -20,17 +22,17 @@
       align-items: center;
     }
     .version-select {
-      width: 300px; /* ÉèÖÃÑ¡Ôñ¿òµÄ¿í¶È */
-      height: 40px; /* ÉèÖÃÑ¡Ôñ¿òµÄ¸ß¶È */
-      border-radius: 20px; /* Ô²½ÇÍâ¹Û */
-      appearance: none; /* Òş²ØÄ¬ÈÏµÄÏÂÀ­¼ıÍ· */
-      padding: 5px 10px; /* µ÷ÕûÄÚÈİºÍ±ß¿òÖ®¼äµÄ¼ä¾à */
-      font-size: 16px; /* ÉèÖÃ×ÖÌå´óĞ¡ */
-      background-color: #e0e0e0; /* Ìí¼Ó±³¾°ÑÕÉ« */
-      border: none; /* ÒÆ³ıÄ¬ÈÏ±ß¿ò */
+      width: 300px; /* è®¾ç½®é€‰æ‹©æ¡†çš„å®½åº¦ */
+      height: 40px; /* è®¾ç½®é€‰æ‹©æ¡†çš„é«˜åº¦ */
+      border-radius: 20px; /* åœ†è§’å¤–è§‚ */
+      appearance: none; /* éšè—é»˜è®¤çš„ä¸‹æ‹‰ç®­å¤´ */
+      padding: 5px 10px; /* è°ƒæ•´å†…å®¹å’Œè¾¹æ¡†ä¹‹é—´çš„é—´è· */
+      font-size: 16px; /* è®¾ç½®å­—ä½“å¤§å° */
+      background-color: #e0e0e0; /* æ·»åŠ èƒŒæ™¯é¢œè‰² */
+      border: none; /* ç§»é™¤é»˜è®¤è¾¹æ¡† */
     }
     .version-select:focus {
-      outline: none; /* »ñµÃ½¹µãÊ±ÒÆ³ı±ß¿òÑùÊ½ */
+      outline: none; /* è·å¾—ç„¦ç‚¹æ—¶ç§»é™¤è¾¹æ¡†æ ·å¼ */
     }
     .download-link {
       display: inline-block;
@@ -39,7 +41,7 @@
       background-color: #e0e0e0;
       color: #333;
       text-decoration: none;
-      border-radius: 20px; /* Ô²½ÇÍâ¹Û */
+      border-radius: 20px; /* åœ†è§’å¤–è§‚ */
       transition: background-color 0.3s ease;
     }
     .download-link:hover {
@@ -49,22 +51,22 @@
       position: fixed;
       bottom: 20px;
       right: 20px;
-      font-size: 14px; /* ¸ÄÎª½Ï´óµÄ×ÖÌå´óĞ¡ */
+      font-size: 14px; /* æ”¹ä¸ºè¾ƒå¤§çš„å­—ä½“å¤§å° */
       color: #ccc;
     }
   </style>
 </head>
 <body>
-  <h1>Ñ¡ÔñÒªÏÂÔØµÄ°æ±¾</h1>
+  <h1>é€‰æ‹©è¦ä¸‹è½½çš„ç‰ˆæœ¬</h1>
   <div class="download-links">
     <select id="version-select" class="version-select">
-      <option value="" disabled selected>ÇëÑ¡ÔñÒ»¸ö°æ±¾</option>
-      <option value="new_version.zip">ĞÂ°æ±¾</option>
-      <option value="old_version.zip">¾É°æ±¾</option>
+      <option value="" disabled selected>è¯·é€‰æ‹©ä¸€ä¸ªç‰ˆæœ¬</option>
+      <option value="new_version.zip">æ–°ç‰ˆæœ¬</option>
+      <option value="old_version.zip">æ—§ç‰ˆæœ¬</option>
     </select>
-    <a href="" download id="download-button" class="download-link">ÏÂÔØ</a>
+    <a href="" download id="download-button" class="download-link">ä¸‹è½½</a>
   </div>
-  <div class="ecowar-text">2023-2023 ÓÉ gpt Ìá¹©</div>
+  <div class="ecowar-text">2023-2023 ç”± gpt æä¾›</div>
   <script>
     const versionSelect = document.getElementById('version-select');
     const downloadButton = document.getElementById('download-button');
