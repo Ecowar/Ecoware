@@ -5,150 +5,136 @@
     <meta charset="UTF-8">
     <title>更新日志</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-        }
-.show-content button {
-  border: none;
-  background-color: #007bff;
-  color: #fff;
-  padding: 10px 20px;
-  border-radius: 20px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
-}
-
-.show-content button:hover {
-  background-color: #0056b3;
-}
-
-        h1 {
-            text-align: center;
-        }
-
-        .update {
-            margin-bottom: 20px;
-        }
-
-        .update .title {
-            font-size: 18px;
-            font-weight: bold;
-            cursor: pointer;
-            transition: max-height 0.3s ease;
-            position: relative;
-            z-index: 1;
-        }
-
-        .update .title.important {
-            color: #ff0000;
-        }
-
-        .update .content {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s ease;
-        }
-
-        .update .content p {
-            margin-bottom: 5px;
-        }
-
-        .update .content a {
-            color: blue;
-            text-decoration: underline;
-        }
-
-        .show-content {
-            text-align: center;
-            margin-bottom: 10px;
-        }
-
-        .show-content button {
-            border: none;
-            background-color: #007bff;
-            color: #fff;
-            padding: 10px 20px;
-            border-radius: 20px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-
-        .show-content button:hover {
-            background-color: #0056b3;
-        }
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f2f2f2;
+        margin: 0;
+        padding: 20px;
+      }
+      h1 {
+        text-align: center;
+        color: #333;
+      }
+      .update-container {
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+      }
+      .update {
+        background-color: #fff;
+        border-radius: 5px;
+        padding: 10px;
+        margin-bottom: 10px;
+      }
+      .update-date {
+        font-weight: bold;
+        color: #666;
+      }
+      .update-description {
+        color: #666;
+      }
     </style>
-    <script>
-        function toggleContent(element) {
-            var content = element.nextElementSibling;
-            if (content.style.maxHeight) {
-                content.style.maxHeight = null;
-            } else {
-                content.style.maxHeight = content.scrollHeight + 'px';
-            }
-        }
-    </script>
-</head>
-<body>
-    <h1>更新日志</h1>
-    <div class="update">
-        <div class="title">版本 1.3.3 - 2024年1月3日</div>
-        <div class="content">
-            <p>新增功能：</p>
-            <ul>
-                <li>添加反抓包功能</li>
-            </ul>
-            <b style="color: red;">被砍内容：</b>
-            </ul>
-            <p>修复问题：</p>
-            <ul>
-                <li>修复了登录失败的问题</li>
-                <li>修复注入问题</li>
-            </ul>
-        </div>
-    </div>
 
-    <div class="update">
-        <div class="title important" onclick="toggleContent(this)">版本 1.3.1 - 2023年7月21日（重要更新）</div>
-        <div class="content">
-            <p>新增功能：</p>
-            <ul>
-                <li>支持登录</li>
-                <li>登录反截图</li>
-                <li>添加本身反截图[登录不受影响]</li>
-                <li>添加求生之路作弊器</li>
-            </ul>
-            <b style="color: red;">被砍内容：</b>
-                <li>官方QQ群</li>
-                <li>选择动画效果</li>
-            </ul>
-            <p>修复问题：</p>
-            <ul>
-                <li>修复注入失败的问题</li>
-                <li>修复了用户登录时与注入时的性能问题</li>
-                <li>修复已知BUG</li>
-            </ul>
-        </div>
+    <title>更新日志</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f2f2f2;
+        margin: 0;
+        padding: 20px;
+      }
+      h1 {
+        text-align: center;
+        color: #333;
+      }
+      .update-container {
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+      }
+      .update {
+        background-color: #fff;
+        border-radius: 5px;
+        padding: 10px;
+        margin-bottom: 10px;
+      }
+      .update-date {
+        font-weight: bold;
+        color: #666;
+      }
+      .update-description {
+        color: #666;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="update-container">
+      <h1>更新日志</h1>
     </div>
-
-    <div class="show-content">
-        <button onclick="toggleAllContent()">展开/收起全部更新日志</button>
+    <div class="update-container">
+      <div class="update">
+        <div class="update-date">1.3.4 更新</div>
+        <div class="update-date">功能与改进</div>
+        <p class="update-description">删除自定义注入时间</p>
+        <p class="update-description">彻底删除了登录系统</p>
+        <p class="update-description">暂时关闭了DDOS攻击程序</p>
+        <p class="update-description">在关于中添加更新日志</p>
+        <div class="update-date">问题修复</div>
+        <p class="update-description">
+          修复了Beta实验室中 DLL保存程序
+          的丢失问题，并解决了与DLL提前下载的重复问题。
+        </p>
+      </div>
+      <div class="update">
+        <div class="update-date">1.3.3 更新</div>
+        <div class="update-date">功能与改进</div>
+        <p class="update-description">自定义注入功能等放到了"杂项测试"</p>
+        <p class="update-description">
+          优化了DLL下载方式，改用CMD调用PowerShell进行下载
+        </p>
+        <p class="update-description">允许启动或关闭反抓包功能</p>
+        <p class="update-description">微云链接重构</p>
+        <p class="update-description">添加退出登录</p>
+        <p class="update-description">关闭自定义注入时间</p>
+        <div class="update-date">问题修复</div>
+        <p class="update-description">修复了图片载入显示问题</p>
+        <p class="update-description">修复了DLL注入后程序闪退的问题</p>
+        <p class="update-description">修复了无法更新问题</p>
+      </div>
+      <div class="update">
+        <div class="update-date">1.3.2 更新</div>
+        <div class="update-date">功能与改进</div>
+        <p class="update-description">DLL注入优化，并添加Manual Map注入方式</p>
+        <p class="update-description">
+          修复了Beta实验室中 DLL保存程序
+          的丢失问题，并解决了与DLL提前下载的重复问题。
+        </p>
+        <p class="update-description">添加反抓包</p>
+        <p class="update-description">允许选择性反截图[登录反截图不受影响]</p>
+        <p class="update-description">添加退出登录</p>
+        <p class="update-description">优化部分代码逻辑</p>
+        <div class="update-date">问题修复</div>
+        <p class="update-description">修复了图片显示问题</p>
+        <p class="update-description">修复了登录闪退问题</p>
+      </div>
+      <div class="update">
+        <div class="update-date">1.3.1 更新</div>
+        <div class="update-date">功能与改进</div>
+        <p class="update-description">支持登录</p>
+        <p class="update-description">登录反截图</p>
+        <p class="update-description">添加反抓包</p>
+        <p class="update-description">关闭官方QQ群</p>
+        <p class="update-description">添加本身反截图[登录不受影响]</p>
+        <p class="update-description">添加求生之路作弊器</p>
+        <p class="update-description">删除选择动画效果</p>
+        <div class="update-date">问题修复</div>
+        <p class="update-description">修复了用户登录时与注入时的性能问题</p>
+        <p class="update-description">修复已知BUG</p>
+      </div>
     </div>
+  </body>
+</html>
 
-    <script>
-        function toggleAllContent() {
-            var contents = document.querySelectorAll('.update .content');
-            for (var i = 0; i < contents.length; i++) {
-                var content = contents[i];
-                if (content.style.maxHeight) {
-                    content.style.maxHeight = null;
-                } else {
-                    content.style.maxHeight = content.scrollHeight + 'px';
-                }
-            }
-        }
-    </script>
 
 </body>
 </html>
